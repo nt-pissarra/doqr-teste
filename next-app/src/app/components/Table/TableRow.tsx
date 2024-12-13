@@ -29,7 +29,7 @@ const TableRow = ({ data, deleteUser }: TableRowProps) => {
   };
 
   return (
-    <div className="table-row">
+    <div className="table-row grid-cols-[130px_260px_minmax(120px,_180px)_minmax(120px,_280px)_minmax(120px,_260px)_minmax(120px,_210px)_120px_70px]">
       <span className="font-bold break-words">{data.name}</span>
       <span className="overflow-hidden break-words">{data.email}</span>
       <span>{data.cpf}</span>
