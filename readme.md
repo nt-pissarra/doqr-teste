@@ -7,8 +7,11 @@ Este repositório contém a aplicação DOQR com um back-end em .NET e front-end
 A aplicação está dividida nas seguintes pastas:
 
 - **doqr-back**: Contém o código do back-end em .NET.
+   [Repositório Original](https://github.com/nt-pissarra/doqr-back)
+  
 - **next-app**: Contém o código do front-end em React (Next.js).
-
+   [Repositório Original](https://github.com/nt-pissarra/doqr-front)
+   
 # Requisitos
 
 Antes de rodar a aplicação, certifique-se de que você tem as seguintes ferramentas instaladas:
@@ -81,29 +84,29 @@ O backend está configurado para ser executado com Docker Compose. Siga os passo
    docker-compose down
    ```
 
-### 1. Rodando o Frontend
+### 2. Rodando o Frontend
 
-  O frontend (Next.js) não é executado diretamente pelo Docker, então você precisará instalar as dependências e rodá-lo manualmente.
+O frontend (Next.js) não é executado diretamente pelo Docker, então você precisará instalar as dependências e rodá-lo manualmente.
 
-  1. Acesse a pasta next-app:
+1. Acesse a pasta next-app:
    ```bash
    cd next-app
    ```
-    
-  2. Instale as dependências com o comando npm:
+ 
+2. Instale as dependências com o comando npm:
    ```bash
    npm install
    ```
 
-  3. Gere o build do frontend (se necessário, para produção):
+3. Gere o build do frontend (se necessário, para produção):
    ```bash
    npm run build
    ```
 
-  4. Inicie o servidor:
+4. Inicie o servidor:
    ```bash
    npm start
    ```
 
-   O frontend estará disponível no navegador no link http://localhost:3000.
+O frontend estará disponível no navegador no link http://localhost:3000.
   
