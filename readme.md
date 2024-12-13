@@ -98,7 +98,7 @@ O frontend (Next.js) não é executado diretamente pelo Docker, então você pre
    npm install
    ```
 
-3. Gere o build do frontend (se necessário, para produção):
+3. Gere o build do frontend:
    ```bash
    npm run build
    ```
