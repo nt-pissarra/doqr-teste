@@ -1,0 +1,47 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary: #7741fb;
+  --primary-text: #0b0b0c;
+  --delete: #fa5e5e;
+  --background: #fdfcff;
+  --borders: #cdcad2;
+  --font-inter: "Inter", sans-serif;
+}
+
+body {
+  font-family: var(--font-inter);
+}
+
+.table-header {
+  background-color: #efedf2;
+}
+
+.table-header__title {
+  color: #58575a;
+  font-weight: bold;
+}
+
+.table-header,
+.table-row {
+  display: grid;
+  justify-content: space-between;
+  gap: 12px;
+  grid-template-columns:
+    130px 260px minmax(120px, 180px) minmax(120px, 280px)
+    minmax(120px, 260px) minmax(120, 210px) 120px 70px;
+  align-items: center;
+  padding: 0 16px;
+  min-height: 51px;
+}
+
+.table-row {
+  border-top: 1px solid var(--borders);
+}
+
+.form-container {
+  box-shadow: 1px 1px 16px 0px #00000026;
+  border-radius: 12px;
+}

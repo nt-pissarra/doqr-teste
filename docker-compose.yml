@@ -1,0 +1,45 @@
+version: "3.8"
+
+services:
+  dotnet:
+    build:
+      context: .
+      dockerfile: ./docker/Dockerfile-dotnet
+    ports:
+      - "8080:8080"
+    depends_on:
+      mysql:
+        condition: service_healthy
+    environment:
+      - ASPNETCORE_URLS=http://+:8080
+
+  mysql:
+    image: mysql:8.0
+    container_name: mysql-db
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: rootpassword
+      MYSQL_DATABASE: mydatabase
+      MYSQL_USER: myuser
+      MYSQL_PASSWORD: mypassword
+    volumes:
+      - db-data:/var/lib/mysql
+    healthcheck:
+      test:
+        [
+          "CMD",
+          "mysqladmin",
+          "ping",
+          "-h",
+          "localhost",
+          "-u",
+          "myuser",
+          "-pmypassword",
+        ]
+      interval: 15s
+      timeout: 10s
+      retries: 5
+
+volumes:
+  db-data:
