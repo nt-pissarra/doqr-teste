@@ -105,4 +105,5 @@ O backend está configurado para ser executado com Docker Compose. Siga os passo
    npm start
    ```
 
+   O frontend estará disponível no navegador no link http://localhost:3000.
   
