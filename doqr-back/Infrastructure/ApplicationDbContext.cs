@@ -1,6 +1,6 @@
-﻿using Domain.Models;
+﻿using System.Text.RegularExpressions;
+using Domain.Models;
 using Microsoft.EntityFrameworkCore;
-using System.Text.RegularExpressions;
 
 namespace Infrastructure
 {
