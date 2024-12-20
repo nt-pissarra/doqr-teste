@@ -49,12 +49,12 @@ const TableRow = ({ data, deleteUser }: TableRowProps) => {
       </div>
       <span className="flex items-center gap-3 last:col-span-1">
         <button onClick={() => editUser(data.id)}>
-          <Image width={14} height={14} src={editIcon.src} alt="edit-icon" />
+          <Image width={18} height={18} src={editIcon.src} alt="edit-icon" />
         </button>
         <button onClick={() => deleteUser(data.id)}>
           <Image
-            width={14}
-            height={14}
+            width={16}
+            height={18}
             src={deleteIcon.src}
             alt="delete-icon"
           />
