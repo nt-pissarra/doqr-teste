@@ -14,7 +14,7 @@ namespace Infrastructure.Interfaces
         public Task<User> CreateUserAsync(User user);
 
         public Task<User> UpdateUserAsync(User user);
-
+        
         public Task<bool> DeleteUserAsync(User user);
     }
 }

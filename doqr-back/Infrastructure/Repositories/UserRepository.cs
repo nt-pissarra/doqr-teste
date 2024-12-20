@@ -11,7 +11,7 @@ namespace Infrastructure.Repositories
 
         public UserRepository(ApplicationDbContext context)
         {
-            _context = context;
+             _context = context;
         }
 
         public async Task<IEnumerable<User>> GetAllUsersAsync()
@@ -24,7 +24,7 @@ namespace Infrastructure.Repositories
         public async Task<IEnumerable<User>> GetUsersByNameAsync(string name)
         {
             var users = await _context.Users
-                .Where(u => u.Name.Contains(name))
+                .Where(u => u.Name.Contains(name))  
                 .ToListAsync(); ;
 
             return users;

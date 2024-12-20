@@ -3,6 +3,7 @@
 using Application.Dtos;
 using Application.Interfaces;
 using Domain.Models;
+using Domain.Models.Enums;
 using Infrastructure.Interfaces;
 
 namespace Application.Services
@@ -35,7 +36,7 @@ namespace Application.Services
 
         public async Task<List<UserDto>> GetUsersByNameAsync(string name)
         {
-
+        
             var users = await _userRepository.GetUsersByNameAsync(name);
 
             var usersDto = new List<UserDto>();
@@ -73,7 +74,7 @@ namespace Application.Services
 
             if (user == null)
             {
-                return null;
+                return null; 
             }
 
             user = UpdateUserDtoToModel(user, userDto);
