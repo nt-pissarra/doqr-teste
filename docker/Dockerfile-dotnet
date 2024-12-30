@@ -9,6 +9,7 @@ COPY doqr-back/API/API.csproj ./API/
 COPY doqr-back/Domain/Domain.csproj ./Domain/
 COPY doqr-back/Infrastructure/Infrastructure.csproj ./Infrastructure/
 COPY doqr-back/Application/Application.csproj ./Application/
+COPY doqr-back/Tests/Tests.csproj ./Tests/
 
 RUN dotnet restore doqr.sln
 
